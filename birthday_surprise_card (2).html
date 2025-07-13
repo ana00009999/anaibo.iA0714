@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: #2e0057; /* dark purple */
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    #card {
+      max-width: 800px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      font-weight: normal;
+      color: #f0d9ff;
+    }
+    .text-block {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 1.5em;
+    }
+    .text-block p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin: 0.75em 0;
+    }
+    .heart {
+      display: inline-block;
+      width: 40px;
+      height: 36px;
+      background: #ff3366;
+      position: relative;
+      transform: rotate(-45deg);
+      margin-left: 8px;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 40px;
+      height: 36px;
+      background: #ff3366;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart::before { top: -20px; left: 0; }
+    .heart::after { left: 20px; top: 0; }
+    button {
+      background: #ff3366;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover { opacity: 0.9; }
+    #surprise {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+    }
+    #surprise ul {
+      list-style: none;
+      padding: 0;
+    }
+    #surprise li {
+      margin: 10px 0;
+      background: rgba(255,51,102,0.2);
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="card">
+    <h1>Happy Birthday, Ibrahim Avci</h1>
+    <h2>(Anastasia Wang's Partner)</h2>
+    <div class="text-block">
+      <p>WO AI NI, Baobao <span class="heart"></span></p>
+      <p>You know, last night when you asked me why I kept staring at you… I was honestly thinking, wow, I can't believe I can be this close—mentally and physically—to someone outside of my family in this world.</p>
+      <p>And even more amazing, I think this person feels the same way. And he just happens to be super cute, smart, handsome (of course), and yk just perfect 😚</p>
+      <p>Thank you, baobao. Thank you for everything you’ve done for me. You always take care of me, stand by my side 🥺 and always tolerate my farts 🤗</p>
+      <p>Baobao, bebeğim, I truly wish you the happiest birthday and the best year ahead at 22~</p>
+      <p>I hope we can grow younger and healthier together. And of course, “enen” more together too 🤭😳</p>
+      <p>Also, almost forgot this, let’s get richer together so we can have all the things we want (instead of just meeting my need 🤭): a car, a boat, and our own cinema~~~</p>
+      <p>And I’m sorry again, baobao, for not pulling off a big birthday surprise this time 🥺 but don’t worry, I promise I’ll make up for it very soon!!</p>
+    </div>
+    <button onclick="toggleMessage()">Reveal Surprise 🎉</button>
+    <div id="surprise">
+      <ul>
+        <li>EnEn invite voucher</li>
+        <li>Let me talk to my friend voucher</li>
+        <li>Let's have chocolate together voucher</li>
+        <li>Anything you want -- Redeem for any 😈😈 you want to try with me, no expiration</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleMessage() {
+      const el = document.getElementById('surprise');
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
